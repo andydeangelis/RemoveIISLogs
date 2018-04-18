@@ -5,4 +5,6 @@ $script = $PSScriptRoot + "\Get-IISLogFiles.ps1"
 # Bypass the execution policy is required in order to load the WebAdministration module in server 2008R2.
 $argumentList = "-executionpolicy bypass -windowstyle normal -nologo -file $script"
 
-Start-Process powershell -WorkingDirectory $PSScriptRoot -ArgumentList $argumentList -NoNewWindow
+#Start-Process powershell -WorkingDirectory $PSScriptRoot -ArgumentList $argumentList -NoNewWindow
+
+Start-Process powershell -Verb runAs -WorkingDirectory $PSScriptRoot -ArgumentList $argumentList
