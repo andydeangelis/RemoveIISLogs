@@ -1,1 +1,1 @@
-powershell.exe -executionpolicy bypass -windowstyle normal -nologo -file "Launcher.ps1"
+powershell.exe -executionpolicy bypass -windowstyle normal -nologo -file %~dp0\Launcher.ps1
