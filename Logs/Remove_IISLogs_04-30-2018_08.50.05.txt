@@ -1,0 +1,51 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180430085005
+Username: ANDYHOME\dalthakar
+RunAs User: ANDYHOME\dalthakar
+Configuration Name: 
+Machine: ANDY-W10-02 (Microsoft Windows NT 10.0.16299.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 51148
+PSVersion: 5.1.16299.251
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.16299.251
+BuildVersion: 10.0.16299.251
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Scripts\IIS\RemoveIISLogs\Logs\Remove_IISLogs_04-30-2018_08.50.05.txt
+Import-module : Process should have elevated status to access IIS configuration data.
+At C:\Scripts\IIS\RemoveIISLogs\Get-IISLogFiles.ps1:35 char:1
++ Import-module WebAdministration
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Import-Module], InvalidOperationException
+    + FullyQualifiedErrorId : Module_ImportModuleError,Microsoft.PowerShell.Commands.ImportModuleCommand
+Import-module : Process should have elevated status to access IIS configuration data.
+At C:\Scripts\IIS\RemoveIISLogs\Get-IISLogFiles.ps1:35 char:1
++ Import-module WebAdministration
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [Import-Module], InvalidOperationException
+    + FullyQualifiedErrorId : Module_ImportModuleError,Microsoft.PowerShell.Commands.ImportModuleCommand
+
+PS>TerminatingError(Get-Website): "Cannot find a provider with the name 'WebAdministration'."
+Get-Website : Cannot find a provider with the name 'WebAdministration'.
+At C:\Scripts\IIS\RemoveIISLogs\Get-IISLogFiles.ps1:39 char:13
++ $WebSites = Get-Website | Select Name, Id, LogFile
++             ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (WebAdministration:String) [Get-Website], ProviderNotFoundException
+    + FullyQualifiedErrorId : ProviderNotFound,Microsoft.IIs.PowerShell.Provider.GetWebsiteCommand
+Get-Website : Cannot find a provider with the name 'WebAdministration'.
+At C:\Scripts\IIS\RemoveIISLogs\Get-IISLogFiles.ps1:39 char:13
++ $WebSites = Get-Website | Select Name, Id, LogFile
++             ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (WebAdministration:String) [Get-Website], ProviderNotFoundException
+    + FullyQualifiedErrorId : ProviderNotFound,Microsoft.IIs.PowerShell.Provider.GetWebsiteCommand
+
+0  MB of log files have been deleted from the system.
+**********************
+Windows PowerShell transcript end
+End time: 20180430085005
+**********************

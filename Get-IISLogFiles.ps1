@@ -31,7 +31,7 @@ $WebSites = Get-Website | Select Name, Id, LogFile
 
 $TotalLogFileSize = @()
 
-# Get log directories for each web site and delete all log files older than 3 days.
+# Get log directories for each web site and delete all log files older than X days. Change the AddDays() parameter to change the days to keep.
 
 foreach ($WebSite in $WebSites)
 {
